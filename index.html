@@ -1831,54 +1831,37 @@
 
             <!-- Event 1: CodeStorm -->
             <div class="event-card" data-event="CodeStorm – Hackathon">
-                <div class="event-icon code">⚡</div>
-                <h3>CodeStorm – Hackathon</h3>
-                <p>
-                    A 2-day competitive coding event where participants go through qualifying rounds 
-                    and build innovative solutions in a 4-hour hackathon.
-                </p>
+    <div class="event-icon code">⚡</div>
+    <h3>CodeStorm – Hackathon</h3>
 
-                <div class="event-structure">
-                    <strong>Structure:</strong><br>
-                    <b>Day 1:</b> Aptitude + Coding MCQ, Debugging Challenge<br>
-                    <b>Day 2:</b> Final 4-hour Hackathon
-                </div>
+    <p>
+        A multi-stage coding innovation challenge where participants battle through
+        aptitude screening, idea submission, and a final offline hackathon.
+    </p>
 
-                <div class="event-meta">
-                    <span>📅 Date: TBD</span>
-                    <span>⏰ Time: TBD</span>
-                </div>
+    <div class="event-structure">
+        <strong>Flow:</strong><br>
 
-                <button class="btn-register" onclick="openModal('CodeStorm – Hackathon')">
-                    Register ↗
-                </button>
-            </div>
+        <b>23 May:</b> Aptitude Round<br>
+        Selected candidates proceed to next round<br><br>
 
-            <!-- Event 2: Tech Arena -->
-            <div class="event-card" data-event="Tech Arena – Gaming Tournament">
-                <div class="event-icon game">🎮</div>
-                <h3>Tech Arena – Gaming Tournament</h3>
-                <p>
-                    An esports tournament featuring competitive games like Valorant, BGMI, and FIFA. 
-                    Compete in qualifiers and battle in finals.
-                </p>
+        <b>Before 25 May:</b> Idea Submission<br><br>
 
-                <div class="event-structure">
-                    <strong>Structure:</strong><br>
-                    <b>Day 1:</b> Qualifiers<br>
-                    <b>Day 2:</b> Finals
-                </div>
+        <b>30 May:</b> Offline Idea Presentation + 2 Hour Hackathon
+    </div>
 
-                <div class="event-meta">
-                    <span>📅 Date: TBD</span>
-                    <span>⏰ Time: TBD</span>
-                </div>
+    <div class="event-meta">
+        <span>📅 Dates: 23 May & 30 May</span>
+        <span>👥 Solo / Team of 2</span>
+        <span>💳 Fee: ₹40</span>
+    </div>
 
-                <button class="btn-register" onclick="openModal('Tech Arena – Gaming Tournament')">
-                    Register ↗
-                </button>
-            </div>
-
+    <button class="btn-register" onclick="openModal('CodeStorm – Hackathon')">
+        Register ↗
+    </button>
+</div>
+           
+            
         </div>
     </div>
 </section>
@@ -1893,110 +1876,58 @@
         </div>
 
         <div class="schedule-tabs">
-            <button class="schedule-tab active" onclick="showDay(1, this)">Day 1</button>
-            <button class="schedule-tab" onclick="showDay(2, this)">Day 2</button>
+            <button class="schedule-tab active" onclick="showDay(1, this)">23 May</button>
+<button class="schedule-tab" onclick="showDay(2, this)">30 May</button>
         </div>
 
         <!-- Day 1 -->
         <div class="schedule-day active" id="day-1">
             <div class="timeline">
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">08:00 AM – 09:00 AM</div>
-                        <div class="timeline-event">Registration & Check-in</div>
-                        <div class="timeline-venue">Main Lobby</div>
-                    </div>
-                </div>
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <div class="timeline-time">23 May</div>
+            <div class="timeline-event">CodeStorm — Aptitude Round</div>
+            <div class="timeline-venue">Online</div>
+        </div>
+    </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">09:00 AM – 10:00 AM</div>
-                        <div class="timeline-event">Opening Ceremony</div>
-                        <div class="timeline-venue">Auditorium</div>
-                    </div>
-                </div>
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <div class="timeline-time">Before 25 May</div>
+            <div class="timeline-event">Idea Submission for Selected Candidates</div>
+            <div class="timeline-venue">Online Submission</div>
+        </div>
+    </div>
 
-                <!-- CodeStorm Round 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">10:00 AM – 12:00 PM</div>
-                        <div class="timeline-event">CodeStorm — Aptitude + Coding MCQ</div>
-                        <div class="timeline-venue">Computer Lab</div>
-                    </div>
-                </div>
-
-                <!-- CodeStorm Round 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">01:00 PM – 03:00 PM</div>
-                        <div class="timeline-event">CodeStorm — Debugging Challenge</div>
-                        <div class="timeline-venue">Computer Lab</div>
-                    </div>
-                </div>
-
-                <!-- Gaming Qualifiers -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">03:30 PM – 08:00 PM</div>
-                        <div class="timeline-event">Tech Arena — Qualifiers (Valorant, BGMI, FIFA)</div>
-                        <div class="timeline-venue">Gaming Zone</div>
-                    </div>
-                </div>
-
-            </div>
+</div>
         </div>
 
         <!-- Day 2 -->
         <div class="schedule-day" id="day-2">
             <div class="timeline">
 
-                <!-- Hackathon -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">09:00 AM – 01:00 PM</div>
-                        <div class="timeline-event">CodeStorm — 4 Hour Hackathon</div>
-                        <div class="timeline-venue">Innovation Hall</div>
-                    </div>
-                </div>
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <div class="timeline-time">30 May</div>
+            <div class="timeline-event">Idea Presentation</div>
+            <div class="timeline-venue">Offline</div>
+        </div>
+    </div>
 
-                <!-- Gaming Finals -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">11:00 AM – 05:00 PM</div>
-                        <div class="timeline-event">Tech Arena — Finals</div>
-                        <div class="timeline-venue">Main Gaming Arena</div>
-                    </div>
-                </div>
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <div class="timeline-time">After Presentation</div>
+            <div class="timeline-event">2 Hour Offline Hackathon</div>
+            <div class="timeline-venue">Innovation Hall</div>
+        </div>
+    </div>
 
-                <!-- Results -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">05:30 PM – 06:30 PM</div>
-                        <div class="timeline-event">Results & Prize Distribution</div>
-                        <div class="timeline-venue">Auditorium</div>
-                    </div>
-                </div>
-
-                <!-- Closing -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-time">06:30 PM – 08:00 PM</div>
-                        <div class="timeline-event">Closing Ceremony</div>
-                        <div class="timeline-venue">Main Stage</div>
-                    </div>
-                </div>
-
-            </div>
+</div>
         </div>
     </div>
 </section>
@@ -2034,15 +1965,16 @@
                 <div class="detail-panel">
                     <h3><span class="icon">📋</span> Rules & Guidelines</h3>
                     <ul class="rules-list">
-                        <li>Valid college ID is mandatory for entry</li>
-                        <li>Teams must register before March 20, 2026</li>
-                        <li>Max team size: 4 members per event</li>
-                        <li>No plagiarism — original work only</li>
-                        <li>Organizers' decisions are final</li>
-                        <li>Follow the code of conduct at all times</li>
-                        <li>Arrive 30 minutes before your event</li>
-                        <li>Bring your own laptops for hackathon</li>
-                    </ul>
+    <li>Solo participation or team of 2 allowed</li>
+    <li>Only the team leader should complete registration</li>
+    <li>Registration fee: ₹40 per team/participant</li>
+    <li>Payment screenshot upload is mandatory</li>
+    <li>Valid college ID is mandatory</li>
+    <li>Idea submission is compulsory after qualification</li>
+    <li>Bring your own laptop for the offline hackathon</li>
+    <li>No plagiarism — original ideas only</li>
+    <li>Organizers' decisions will be final</li>
+</ul>
                 </div>
 
                 <div class="detail-panel">
