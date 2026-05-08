@@ -212,7 +212,7 @@
         ============================================ */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -621,11 +621,7 @@
             border: 1px solid rgba(0, 212, 255, 0.2);
         }
 
-        .event-badge.techarena {
-            background: rgba(255, 45, 124, 0.1);
-            color: var(--neon-pink);
-            border: 1px solid rgba(255, 45, 124, 0.2);
-        }
+        
 
         .event-badge.general {
             background: rgba(184, 41, 221, 0.1);
@@ -658,6 +654,17 @@
             color: var(--neon-green);
             border: 1px solid rgba(57, 255, 20, 0.2);
         }
+        .status-badge.verified {
+    background: rgba(57, 255, 20, 0.1);
+    color: var(--neon-green);
+    border: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+.status-badge.unverified {
+    background: rgba(255, 230, 0, 0.1);
+    color: var(--neon-yellow);
+    border: 1px solid rgba(255, 230, 0, 0.2);
+}
 
         .status-badge.pending {
             background: rgba(255, 230, 0, 0.1);
@@ -754,6 +761,33 @@
             .header-right { flex-direction: column; }
             .header-btn { width: 100%; justify-content: center; }
         }
+        .preview-btn{
+
+    padding:6px 12px;
+
+    border-radius:6px;
+
+    border:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--neon-purple),
+            var(--neon-blue)
+        );
+
+    color:white;
+
+    font-family:var(--font-display);
+
+    font-size:0.62rem;
+
+    cursor:pointer;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
     </style>
 </head>
 <body>
@@ -791,13 +825,9 @@
         <div class="stat-card">
             <div class="stat-icon">💻</div>
             <div class="stat-number" id="stat-codestorm">—</div>
-            <div class="stat-label">CodeStorm</div>
+            <div class="stat-label">CodeStorm Teams</div>
         </div>
-        <div class="stat-card">
-            <div class="stat-icon">🎮</div>
-            <div class="stat-number" id="stat-techarena">—</div>
-            <div class="stat-label">Tech Arena</div>
-        </div>
+        
         <div class="stat-card">
             <div class="stat-icon">✅</div>
             <div class="stat-number" id="stat-confirmed">—</div>
@@ -816,7 +846,7 @@
         <!-- EVENT BREAKDOWN -->
         <div class="panel">
             <div class="panel-header">
-                <div class="panel-title">🎯 Event Registrations</div>
+                <div class="panel-title">⚡ CodeStorm Analytics</div>
             </div>
             <div class="panel-body" id="event-breakdown">
                 <div class="loading-state">
@@ -853,33 +883,47 @@
         </div>
 
         <!-- Day 1 -->
-        <div class="schedule-content active" id="admin-day-1">
-            <div class="schedule-row">
-                <div class="schedule-time">08:00 AM – 09:00 AM</div>
-                <div class="schedule-event-name">🚪 Registration & Check-in</div>
-                <div class="schedule-venue">Main Lobby</div>
-            </div>
-            <div class="schedule-row">
-                <div class="schedule-time">09:00 AM – 10:00 AM</div>
-                <div class="schedule-event-name">🎤 Opening Ceremony</div>
-                <div class="schedule-venue">Auditorium</div>
-            </div>
-            <div class="schedule-row">
-                <div class="schedule-time">10:00 AM – 12:00 PM</div>
-                <div class="schedule-event-name">💻 CodeStorm — Aptitude + Coding MCQ</div>
-                <div class="schedule-venue">Computer Lab</div>
-            </div>
-            <div class="schedule-row">
-                <div class="schedule-time">01:00 PM – 03:00 PM</div>
-                <div class="schedule-event-name">🐛 CodeStorm — Debugging Challenge</div>
-                <div class="schedule-venue">Computer Lab</div>
-            </div>
-            <div class="schedule-row">
-                <div class="schedule-time">03:30 PM – 08:00 PM</div>
-                <div class="schedule-event-name">🎮 Tech Arena — Qualifiers (Valorant, BGMI, FIFA)</div>
-                <div class="schedule-venue">Gaming Zone</div>
-            </div>
-        </div>
+        <div class="schedule-row">
+    <div class="schedule-time">
+        23 MAY • ONLINE
+    </div>
+
+    <div class="schedule-event-name">
+        Aptitude Round
+    </div>
+
+    <div class="schedule-venue">
+        Online
+    </div>
+</div>
+
+<div class="schedule-row">
+    <div class="schedule-time">
+        BEFORE 25 MAY
+    </div>
+
+    <div class="schedule-event-name">
+        Idea Submission
+    </div>
+
+    <div class="schedule-venue">
+        Online
+    </div>
+</div>
+
+<div class="schedule-row">
+    <div class="schedule-time">
+        30 MAY • 2 HOURS
+    </div>
+
+    <div class="schedule-event-name">
+        Offline Hackathon + Idea Presentation
+    </div>
+
+    <div class="schedule-venue">
+        Campus
+    </div>
+</div>
 
         <!-- Day 2 -->
         <div class="schedule-content" id="admin-day-2">
@@ -946,16 +990,17 @@
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Registration ID</th>
-                        <th>Full Name</th>
-                        <th>Roll Number</th>
-                        <th>Email</th>
-                        <th>Department</th>
-                        <th>Event</th>
-                        <th>Status</th>
-                        <th>Registered At</th>
-                    </tr>
+    <th>Reg ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Team Type</th>
+    <th>Team Member</th>
+    <th>Payment</th>
+    <th>Screenshot</th>
+    <th>Status</th>
+    <th>Date</th>
+</tr>
                 </thead>
                 <tbody id="table-body">
                     <tr>
@@ -1211,45 +1256,172 @@
     // RENDER TABLE
     // ============================================
     function renderTable(data) {
-        const tbody = document.getElementById('table-body');
-        const countEl = document.getElementById('record-count');
 
-        if (!data || data.length === 0) {
-            tbody.innerHTML = `
-                <tr><td colspan="9">
+    const tbody =
+        document.getElementById('table-body');
+
+    const countEl =
+        document.getElementById('record-count');
+
+    if (!data || data.length === 0) {
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="10">
+
                     <div class="no-data">
-                        <div class="state-icon">📭</div>
-                        <div class="state-text">No registrations found</div>
+
+                        <div class="state-icon">
+                            📭
+                        </div>
+
+                        <div class="state-text">
+                            No registrations found
+                        </div>
+
                     </div>
-                </td></tr>`;
-            countEl.textContent = '0 records';
-            return;
-        }
 
-        const sorted = [...data].sort((a, b) =>
-            new Date(b.registeredAt) - new Date(a.registeredAt)
-        );
+                </td>
+            </tr>
+        `;
 
-        countEl.textContent = `${sorted.length} record${sorted.length !== 1 ? 's' : ''}`;
+        countEl.textContent = '0 records';
 
-        tbody.innerHTML = sorted.map((reg, i) => {
-            const eventInfo = EVENTS[reg.eventName] || { badgeClass: 'general' };
-            const status = reg.status || 'confirmed';
-
-            return `
-                <tr>
-                    <td>${i + 1}</td>
-                    <td><span class="reg-id">${reg.registrationId || '—'}</span></td>
-                    <td class="name-cell">${reg.fullName}</td>
-                    <td>${reg.rollNumber}</td>
-                    <td class="email-cell">${reg.email}</td>
-                    <td><span class="dept-badge">${reg.department}</span></td>
-                    <td><span class="event-badge ${eventInfo.badgeClass}">${reg.eventName}</span></td>
-                    <td><span class="status-badge ${status}">${status}</span></td>
-                    <td class="date-cell">${formatDate(reg.registeredAt)}</td>
-                </tr>`;
-        }).join('');
+        return;
     }
+
+    const sorted = [...data].sort(
+        (a, b) =>
+            new Date(b.registeredAt)
+            - new Date(a.registeredAt)
+    );
+
+    countEl.textContent =
+        `${sorted.length} record${sorted.length !== 1 ? 's' : ''}`;
+
+    tbody.innerHTML = sorted.map((reg, i) => {
+
+        const verified =
+            reg.paymentVerified === true;
+
+        return `
+
+            <tr>
+
+                <!-- REG ID -->
+
+                <td>
+                    <span class="reg-id">
+                        ${reg.registrationId || '—'}
+                    </span>
+                </td>
+
+                <!-- NAME -->
+
+                <td class="name-cell">
+                    ${reg.fullName || '-'}
+                </td>
+
+                <!-- EMAIL -->
+
+                <td class="email-cell">
+                    ${reg.email || '-'}
+                </td>
+
+                <!-- DEPARTMENT -->
+
+                <td>
+                    <span class="dept-badge">
+                        ${reg.department || '-'}
+                    </span>
+                </td>
+
+                <!-- TEAM TYPE -->
+
+                <td>
+
+                    <span class="event-badge codestorm">
+
+                        ${reg.teamtype || 'Solo'}
+
+                    </span>
+
+                </td>
+
+                <!-- TEAM MEMBER -->
+
+                <td>
+
+                    ${reg.member2 || '-'}
+
+                </td>
+
+                <!-- PAYMENT -->
+
+                <td>
+
+                    <span class="status-badge ${
+                        verified
+                        ? 'verified'
+                        : 'unverified'
+                    }">
+
+                        ${
+                            verified
+                            ? 'Verified'
+                            : 'Pending'
+                        }
+
+                    </span>
+
+                </td>
+
+                <!-- SCREENSHOT -->
+
+                <td>
+
+                    ${
+                        reg.paymentProof
+                        ? `
+                        <a href="${reg.paymentProof}"
+                           target="_blank"
+                           class="preview-btn">
+
+                           View
+
+                        </a>
+                        `
+                        : 'N/A'
+                    }
+
+                </td>
+
+                <!-- STATUS -->
+
+                <td>
+
+                    <span class="status-badge confirmed">
+
+                        Registered
+
+                    </span>
+
+                </td>
+
+                <!-- DATE -->
+
+                <td class="date-cell">
+
+                    ${formatDate(reg.registeredAt)}
+
+                </td>
+
+            </tr>
+
+        `;
+
+    }).join('');
+}
 
     // ============================================
     // FILTER TABLE
