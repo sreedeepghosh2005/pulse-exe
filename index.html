@@ -2171,57 +2171,468 @@
 
     <!-- ==================== REGISTRATION MODAL ==================== -->
     <div class="modal-overlay" id="modal-overlay">
-        <div class="modal">
-            <button class="modal-close" onclick="closeModal()">✕</button>
-            <div id="reg-form-container">
-                <h2>Register for Pulse.exe</h2>
-                <p class="modal-subtitle">> Join the revolution</p>
-                <div class="event-name-display" id="selected-event">General Registration</div>
-                <form id="registration-form" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label>Full Name <span class="required">*</span></label>
-                        <input type="text" id="fullname" placeholder="Enter your full name" required>
-                        <div class="error-message">Please enter your full name</div>
+
+    <div class="modal">
+
+        <button class="modal-close"
+                onclick="closeModal()">
+
+            ✕
+
+        </button>
+
+        <!-- ================= REGISTRATION FORM ================= -->
+
+        <div id="reg-form-container">
+
+            <h2>Register for Pulse.exe</h2>
+
+            <p class="modal-subtitle">
+                > Join the revolution
+            </p>
+
+            <div class="event-name-display"
+                 id="selected-event">
+
+                General Registration
+
+            </div>
+
+            <!-- ================= FORM ================= -->
+
+            <form id="registration-form"
+                  onsubmit="handleSubmit(event)">
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input type="text"
+                           id="fullname"
+                           placeholder="Enter your full name"
+                           required>
+
+                </div>
+
+                <!-- ROLL NUMBER -->
+
+                <div class="form-group">
+
+                    <label>
+                        Roll Number
+                        <span class="required">*</span>
+                    </label>
+
+                    <input type="text"
+                           id="rollno"
+                           placeholder="e.g., 2024CSE0123"
+                           required>
+
+                </div>
+
+                <!-- DEPARTMENT -->
+
+                <div class="form-group">
+
+                    <label>
+                        Department
+                        <span class="required">*</span>
+                    </label>
+
+                    <select id="department" required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="CSE">
+                            CSE — Computer Science
+                        </option>
+
+                        <option value="IT">
+                            IT — Information Technology
+                        </option>
+
+                        <option value="ECE">
+                            ECE — Electronics & Comm.
+                        </option>
+
+                        <option value="EEE">
+                            EEE — Electrical Engineering
+                        </option>
+
+                        <option value="ME">
+                            ME — Mechanical Engineering
+                        </option>
+
+                        <option value="CE">
+                            CE — Civil Engineering
+                        </option>
+
+                        <option value="AI">
+                            AI — Artificial Intelligence
+                        </option>
+
+                        <option value="DS">
+                            DS — Data Science
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                        <span class="required">*</span>
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           placeholder="your.email@example.com"
+                           required>
+
+                </div>
+
+                <!-- ================= PAYMENT CARD ================= -->
+
+                <div class="payment-card">
+
+                    <div class="payment-header">
+                        Participation & Payment
                     </div>
+
+                    <!-- PARTICIPATION -->
+
                     <div class="form-group">
-                        <label>Roll Number <span class="required">*</span></label>
-                        <input type="text" id="rollno" placeholder="e.g., 2024CSE0123" required>
-                        <div class="error-message">Please enter your roll number</div>
-                    </div>
-                    <div class="form-group">
-                        <label>Department <span class="required">*</span></label>
-                        <select id="department" required>
-                            <option value="">Select Department</option>
-                            <option value="CSE">CSE — Computer Science</option>
-                            <option value="IT">IT — Information Technology</option>
-                            <option value="ECE">ECE — Electronics & Comm.</option>
-                            <option value="EEE">EEE — Electrical Engineering</option>
-                            <option value="ME">ME — Mechanical Engineering</option>
-                            <option value="CE">CE — Civil Engineering</option>
-                            <option value="AI">AI — Artificial Intelligence</option>
-                            <option value="DS">DS — Data Science</option>
-                            <option value="Other">Other</option>
+
+                        <label>
+                            Participation Type
+                            <span class="required">*</span>
+                        </label>
+
+                        <select id="teamtype" required>
+
+                            <option value="">
+                                Select Option
+                            </option>
+
+                            <option value="Solo">
+                                Solo
+                            </option>
+
+                            <option value="Team of 2">
+                                Team of 2
+                            </option>
+
                         </select>
-                        <div class="error-message">Please select your department</div>
+
                     </div>
+
+                    <!-- TEAM MEMBER -->
+
                     <div class="form-group">
-                        <label>Email <span class="required">*</span></label>
-                        <input type="email" id="email" placeholder="your.email@example.com" required>
-                        <div class="error-message">Please enter a valid email</div>
+
+                        <label>
+                            Team Member Name
+                            (if Team of 2)
+                        </label>
+
+                        <input type="text"
+                               id="member2"
+                               placeholder="Enter second member name">
+
                     </div>
-                    <button type="submit" class="btn-submit">⚡ Submit Registration</button>
-                </form>
-            </div>
-            <div class="success-message" id="success-message">
-                <div class="success-icon">✓</div>
-                <h3>Registration Successful!</h3>
-                <p>Welcome to Pulse.exe! 🚀<br>Check your email for confirmation details.</p>
-                <br>
-                <button class="btn btn-secondary" onclick="closeModal()" style="margin-top: 10px;">Close</button>
-            </div>
+
+                    <!-- REGISTRATION FEE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Registration Fee
+                        </label>
+
+                        <input type="text"
+                               value="₹40"
+                               readonly>
+
+                    </div>
+
+                    <!-- NOTE -->
+
+                    <div class="payment-note">
+
+                        Only team leader should register
+
+                    </div>
+
+                    <!-- QR CODE -->
+
+                    <div class="qr-wrapper">
+
+                        <img src="./images/payment-qr.jpeg"
+                             alt="Payment QR"
+                             class="payment-qr">
+
+                    </div>
+
+                    <div class="payment-note">
+
+                        Scan the QR and pay ₹40
+
+                    </div>
+
+                    <!-- PAYMENT SCREENSHOT -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Upload Payment Screenshot
+                            <span class="required">*</span>
+                        </label>
+
+                        <input type="file"
+                               id="paymentProof"
+                               accept="image/*"
+                               required>
+
+                    </div>
+
+                </div>
+
+                <!-- SUBMIT -->
+
+                <button type="submit"
+                        class="btn-submit">
+
+                    ⚡ Complete Registration
+
+                </button>
+
+            </form>
+
         </div>
+
+        <!-- ================= SUCCESS MESSAGE ================= -->
+
+        <div class="success-message"
+             id="success-message">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h3>
+                Registration Successful!
+            </h3>
+
+            <p>
+                Welcome to Pulse.exe 🚀
+                <br>
+                Payment Verified Successfully
+            </p>
+
+            <br>
+
+            <button class="btn btn-secondary"
+                    onclick="closeModal()"
+                    style="margin-top:10px;">
+
+                Close
+
+            </button>
+
+        </div>
+
     </div>
 
+</div>
+
+<!-- ================= EXTRA CSS ================= -->
+
+<style>
+
+/* SCROLLABLE MODAL */
+
+.modal{
+
+    max-height:90vh;
+
+    overflow-y:auto;
+}
+
+/* PAYMENT CARD */
+
+.payment-card{
+
+    margin-top:25px;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:
+        rgba(255,255,255,0.03);
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(14px);
+}
+
+/* HEADER */
+
+.payment-header{
+
+    text-align:center;
+
+    margin-bottom:22px;
+
+    font-family:var(--font-display);
+
+    font-size:0.95rem;
+
+    letter-spacing:2px;
+
+    color:var(--neon-blue);
+
+    text-transform:uppercase;
+}
+
+/* NOTES */
+
+.payment-note{
+
+    text-align:center;
+
+    margin-top:12px;
+
+    margin-bottom:18px;
+
+    color:var(--text-secondary);
+
+    font-size:0.82rem;
+}
+
+/* QR SECTION */
+
+.qr-wrapper{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:22px 0;
+}
+
+.payment-qr{
+
+    width:190px;
+
+    border-radius:16px;
+
+    background:#ffffff;
+
+    padding:10px;
+
+    border:
+        2px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 20px rgba(0,212,255,0.08);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .payment-card{
+
+        padding:18px;
+    }
+
+    .payment-qr{
+
+        width:160px;
+    }
+}
+
+</style>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function handleSubmit(event){
+
+    event.preventDefault();
+
+    const fullname =
+        document.getElementById("fullname").value;
+
+    const roll =
+        document.getElementById("rollno").value;
+
+    const dept =
+        document.getElementById("department").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const team =
+        document.getElementById("teamtype").value;
+
+    const proof =
+        document
+        .getElementById("paymentProof")
+        .files
+        .length;
+
+    if(
+        fullname === "" ||
+        roll === "" ||
+        dept === "" ||
+        email === "" ||
+        team === ""
+    ){
+
+        alert("Please fill all required fields");
+
+        return;
+    }
+
+    if(proof === 0){
+
+        alert("Upload payment screenshot");
+
+        return;
+    }
+
+    document
+        .getElementById("reg-form-container")
+        .style.display = "none";
+
+    document
+        .getElementById("success-message")
+        .classList
+        .add("show");
+}
+
+</script>
     <!-- Music Toggle -->
     <button class="music-toggle" id="music-toggle" title="Toggle Music">🎵</button>
 
