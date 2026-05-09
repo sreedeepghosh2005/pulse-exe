@@ -956,6 +956,72 @@
             padding: 30px 20px;
             display: none;
         }
+        /* ================= GOOGLE FORM ================= */
+
+.gform-notice{
+
+    margin-top:22px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:
+        rgba(255, 230, 0, 0.08);
+
+    border:
+        1px solid rgba(255, 230, 0, 0.15);
+
+    color:#ffe600;
+
+    font-size:0.85rem;
+
+    line-height:1.7;
+
+    text-align:center;
+}
+
+/* BUTTON */
+
+.gform-btn{
+
+    display:inline-block;
+
+    margin-top:22px;
+
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-family:var(--font-display);
+
+    font-size:0.75rem;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b026ff,
+            #00d4ff
+        );
+
+    transition:0.3s ease;
+}
+
+.gform-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(0,212,255,0.3);
+}
 
         .success-message.show {
             display: block;
@@ -2373,12 +2439,47 @@
     </h3>
 
     <p>
-        Welcome to Pulse.exe 🚀
+        Welcome to Pulse.exe! 🚀
         <br>
         Payment Verified Successfully
     </p>
 
-    <!-- IMPORTANT NOTICE -->
+    <!-- REGISTRATION ID -->
+
+    <div class="registration-id-card">
+
+        <div class="id-label">
+            YOUR REGISTRATION ID
+        </div>
+
+        <div class="id-value"
+             id="success-reg-id">
+
+            PX-GEN-XXXX
+
+        </div>
+
+    </div>
+
+    <!-- USER INFO -->
+
+    <div class="success-user-info">
+
+        <div>
+            👤 <span id="success-name"></span>
+        </div>
+
+        <div>
+            📧 <span id="success-email"></span>
+        </div>
+
+        <div>
+            ⚡ CodeStorm Hackathon
+        </div>
+
+    </div>
+
+    <!-- GOOGLE FORM NOTICE -->
 
     <div class="gform-notice">
 
@@ -2390,7 +2491,7 @@
 
     </div>
 
-    <!-- GOOGLE FORM BUTTON -->
+    <!-- GFORM BUTTON -->
 
     <a href="https://forms.gle/3qeLdvfcZSpA7MDGA"
        target="_blank"
@@ -2406,7 +2507,7 @@
             onclick="closeModal()"
             style="margin-top:15px;">
 
-        Close
+        ⚡ Close
 
     </button>
 
@@ -2581,6 +2682,22 @@ function handleSubmit(event){
     document
         .getElementById("reg-form-container")
         .style.display = "none";
+    document.getElementById(
+    "success-name"
+).textContent = fullname;
+
+document.getElementById(
+    "success-email"
+).textContent = email;
+
+document.getElementById(
+    "success-reg-id"
+).textContent =
+    "PX-GEN-" +
+    Math.random()
+    .toString(36)
+    .substring(2, 10)
+    .toUpperCase();
 
     document
         .getElementById("success-message")
