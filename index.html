@@ -2359,34 +2359,58 @@
 
         <!-- ================= SUCCESS MESSAGE ================= -->
 
-        <div class="success-message"
-             id="success-message">
+        <!-- ================= SUCCESS MESSAGE ================= -->
 
-            <div class="success-icon">
-                ✓
-            </div>
+<div class="success-message"
+     id="success-message">
 
-            <h3>
-                Registration Successful!
-            </h3>
+    <div class="success-icon">
+        ✓
+    </div>
 
-            <p>
-                Welcome to Pulse.exe 🚀
-                <br>
-                Payment Verified Successfully
-            </p>
+    <h3>
+        Registration Successful!
+    </h3>
 
-            <br>
+    <p>
+        Welcome to Pulse.exe 🚀
+        <br>
+        Payment Verified Successfully
+    </p>
 
-            <button class="btn btn-secondary"
-                    onclick="closeModal()"
-                    style="margin-top:10px;">
+    <!-- IMPORTANT NOTICE -->
 
-                Close
+    <div class="gform-notice">
 
-            </button>
+        ⚠ IMPORTANT
+        <br><br>
 
-        </div>
+        All participants must mandatorily fill
+        the final Google Form after registration.
+
+    </div>
+
+    <!-- GOOGLE FORM BUTTON -->
+
+    <a href="https://forms.gle/3qeLdvfcZSpA7MDGA"
+       target="_blank"
+       class="gform-btn">
+
+        Fill Mandatory Google Form →
+
+    </a>
+
+    <br>
+
+    <button class="btn btn-secondary"
+            onclick="closeModal()"
+            style="margin-top:15px;">
+
+        Close
+
+    </button>
+
+</div>
 
     </div>
 
@@ -2562,6 +2586,70 @@ function handleSubmit(event){
         .getElementById("success-message")
         .classList
         .add("show");
+}
+    /* ================= GOOGLE FORM SECTION ================= */
+
+.gform-notice{
+
+    margin-top:20px;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:
+        rgba(255, 230, 0, 0.08);
+
+    border:
+        1px solid rgba(255, 230, 0, 0.15);
+
+    color:#ffe600;
+
+    font-size:0.85rem;
+
+    line-height:1.6;
+
+    text-align:center;
+}
+
+.gform-btn{
+
+    display:inline-block;
+
+    margin-top:22px;
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-family:var(--font-display);
+
+    font-size:0.78rem;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--neon-purple),
+            var(--neon-blue)
+        );
+
+    transition:0.3s ease;
+}
+
+.gform-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(0,212,255,0.25);
 }
 
 </script>
