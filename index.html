@@ -373,7 +373,7 @@
             margin-bottom: 10px;
             position: relative;
             opacity: 0;
-            animation: glitchIn 1s ease 0.5s forwards;
+            animation: fadeInUp 1s ease 0.5s forwards;
         }
 
         .hero-title .pulse {
@@ -394,45 +394,7 @@
         }
 
 
-        .hero-title::before,
-        .hero-title::after {
-            content: 'Pulse';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            overflow: hidden;
-            opacity: 0.8;
-        }
-
-        .hero-title::before {
-            color: var(--neon-blue);
-            -webkit-text-fill-color: var(--neon-blue);
-            animation: glitch1 3s infinite;
-            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-        }
-
-        .hero-title::after {
-            color: var(--neon-pink);
-            -webkit-text-fill-color: var(--neon-pink);
-            animation: glitch2 3s infinite;
-            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-        }
-
-        @keyframes glitch1 {
-            0%, 90%, 100% { transform: none; }
-            92% { transform: translate(5px, -2px) skew(2deg); }
-            94% { transform: translate(-3px, 1px) skew(-1deg); }
-            96% { transform: translate(2px, 2px); }
-        }
-
-        @keyframes glitch2 {
-            0%, 88%, 100% { transform: none; }
-            90% { transform: translate(-5px, 2px) skew(-2deg); }
-            93% { transform: translate(3px, -1px) skew(1deg); }
-            95% { transform: translate(-2px, -2px); }
-        }
-
+       
         @keyframes glitchIn {
             0% { opacity: 0; transform: scale(0.9); filter: blur(10px); }
             50% { opacity: 1; transform: scale(1.02); filter: blur(0); }
